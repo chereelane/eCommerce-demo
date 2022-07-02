@@ -1,5 +1,5 @@
-import logo from './favicon.png';
-import './categories.styles.scss'
+import Logo from './favicon.png';
+import './categories.styles.scss';
 
 const  App = () => {
 
@@ -7,39 +7,43 @@ const  App = () => {
         {
             id: 1,
             title: 'Fashion',
+            imageUrl: require('./images/hp-fashion.jpg'),
         },
         {
             id: 2,
             title: 'Architecture',
+            imageUrl: require('./images/hp-architecture.jpg'),
         },
         {
             id: 3,
             title: 'Nature',
+            imageUrl: require('./images/hp-nature.jpg'),
         },
         {
             id: 4,
             title: 'Design',
+            imageUrl: require('./images/hp-design.jpg'),
         },
         {
             id: 5,
             title: 'Blog',
+            imageUrl: require('./images/blog-random-1.jpg'),
         },
         {
             id: 6,
             title: 'Lifestyle',
+            imageUrl: require('./images/hp-lifestyle.jpg'),
         },
     ]
   return (
     <div className="App">
         <h1 className="title"> Shop Shop</h1>
       <div className="categories-container">
-          {categories.map(({title}) => (
-              <div className="category-container hover">
-                  <div className="background-img">
-                      <img src="" alt=""/>
-                  </div>
+          {categories.map(({title, id, imageUrl}) => (
+              <div key={id} className="category-container">
+                  <div className="background-img " style={{backgroundImage: `url(${imageUrl})`}}/>
                   <div className="category-body-container">
-                      <h2>{title}</h2>
+                      <h2 className="category-title">{title}</h2>
                   </div>
               </div>
               ))}
