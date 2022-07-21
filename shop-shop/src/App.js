@@ -1,5 +1,5 @@
-import Logo from './favicon.png';
-import './categories.styles.scss';
+import CategoryItem from "./components/category-item/category-item.component";
+import './categories.styles.scss'
 
 const  App = () => {
 
@@ -34,20 +34,15 @@ const  App = () => {
             title: 'Lifestyle',
             imageUrl: require('./images/hp-lifestyle.jpg'),
         },
-    ]
+    ];
   return (
     <div className="App">
         <h1 className="title"> Shop Shop</h1>
-      <div className="categories-container">
-          {categories.map(({title, id, imageUrl}) => (
-              <div key={id} className="category-container">
-                  <div className="background-img " style={{backgroundImage: `url(${imageUrl})`}}/>
-                  <div className="category-body-container">
-                      <h2 className="category-title">{title}</h2>
-                  </div>
-              </div>
-              ))}
-      </div>
+        <div className="categories-container">
+        {categories.map(( category ) => (
+            <CategoryItem key={ category.id} category={category}/>
+        ))}
+        </div>
     </div>
   );
 }
