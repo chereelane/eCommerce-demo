@@ -1,8 +1,7 @@
-import Logo from './favicon.png';
-import './categories.styles.scss';
+import CategoryMenu from "./components/category-menu/category-menu.component";
+
 
 const  App = () => {
-
     const categories = [
         {
             id: 1,
@@ -34,23 +33,9 @@ const  App = () => {
             title: 'Lifestyle',
             imageUrl: require('./images/hp-lifestyle.jpg'),
         },
-    ]
-  return (
-    <div className="App">
-        <h1 className="title"> Shop Shop</h1>
-      <div className="categories-container">
-          {categories.map(({title, id, imageUrl}) => (
-              <div key={id} className="category-container">
-                  <div className="background-img " style={{backgroundImage: `url(${imageUrl})`}}/>
-                  <div className="category-body-container">
-                      <h2 className="category-title">{title}</h2>
-                  </div>
-              </div>
-              ))}
-      </div>
-    </div>
-  );
-}
+    ];
+  return ( <CategoryMenu categories={categories}/>);
+};
 
 export default App;
 

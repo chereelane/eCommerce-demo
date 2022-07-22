@@ -11,14 +11,6 @@ $nav-color: #324B4E;
 
 // Styles
 
-.App {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 100%;
-
-}
-
 .title {
   font-family: $luckiest-guy;
   font-size: 96px;
@@ -48,7 +40,6 @@ $nav-color: #324B4E;
 
 .category-container {
   flex: 1 1 auto;
-  border: 2px solid black;
   min-width: 25%;
   height: 300px;
   justify-content: center;
@@ -60,6 +51,7 @@ $nav-color: #324B4E;
 
   &:hover {
     cursor: pointer;
+    transform: translate(5px, 5px);
   }
 
   .background-img {
@@ -74,8 +66,8 @@ $nav-color: #324B4E;
 @mixin category-text {
   font-family: $inter;
   font-size: 25px;
-  font-weight: normal;
-  color: black;
+  font-weight: 500;
+  color: white;
 }
 
 .category-title {
