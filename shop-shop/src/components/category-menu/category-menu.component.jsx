@@ -4,7 +4,7 @@ import './category-menu.styles.scss'
 const CategoryMenu = ({ categories }) => {
     return(
         <div className="categories-menu-container">
-            <h1 className="title">Shop Shop</h1>
+            <h1 className="title">Think . Shop</h1>
             <div className="categories-container">
             {categories.map(( category ) => (
                 <CategoryItem key={ category.id} category={category}/>

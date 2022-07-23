@@ -19,6 +19,7 @@ $nav-color: #324B4E;
   color: $title-color;
 }
 
+// Containers that hold the categories
 .categories-container {
   display: flex;
   justify-content: space-evenly;
@@ -29,6 +30,7 @@ $nav-color: #324B4E;
 
 }
 
+// Category background image
 @mixin cat-bg-img {
   width: 100%;
   height: 100%;
@@ -38,6 +40,7 @@ $nav-color: #324B4E;
   border: 1px solid black;
 }
 
+// Individual category containers
 .category-container {
   flex: 1 1 auto;
   min-width: 25%;
