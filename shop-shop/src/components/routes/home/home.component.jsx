@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom'
 import CategoryMenu from "../../category-menu/category-menu.component";
 
 const Home = () => {
@@ -34,7 +35,12 @@ const Home = () => {
             imageUrl: require('../../../images/hp-lifestyle.jpg'),
         },
     ];
-    return ( <CategoryMenu categories={categories}/>);
+    return (
+        <div>
+            <Outlet />
+            <CategoryMenu categories={categories}/>
+        </div>
+    );
 };
 
 export default Home
